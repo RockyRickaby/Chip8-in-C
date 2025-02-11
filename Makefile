@@ -7,7 +7,7 @@
 CC = gcc
 
 # define any compile-time flags
-CFLAGS	:= -Wall -Wextra -g -Wno-missing-braces
+CFLAGS	:= -Wall -Wextra -O3 -Wno-missing-braces
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
@@ -30,7 +30,7 @@ ifeq ($(OS),Windows_NT)
 MAIN	:= Chip8Win.exe
 LFLAGS := $(LFLAGS) -LC\raylib\raylib\src
 INCLUDE := $(INCLUDDE) C\raylib\raylib\src
-USEDLIBS := -lm -lraylib -lopengl32 -lgdi32 -lwinmm # -lKernel32 -mwindows 
+USEDLIBS := -lm -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows 
 SOURCEDIRS	:= $(SRC)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)

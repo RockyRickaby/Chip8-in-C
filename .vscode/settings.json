@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "cstdlib": "cpp",
+        "functional": "cpp",
+        "stdint.h": "c",
+        "limits.h": "c",
+        "raylib.h": "c",
+        "random": "c"
+    }
+}
