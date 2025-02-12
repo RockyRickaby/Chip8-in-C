@@ -8,7 +8,7 @@
 int main(int argc, char const *argv[])
 {
     if (argc != 2) {
-        printf("Usage: ./Chip8Win.exe path_to_game");
+        printf("Usage: ./Chip8Win.exe path_to_game\n");
         return 1;
     }
     if (argc == 2) {
