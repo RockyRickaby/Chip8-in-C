@@ -12,10 +12,11 @@
 #define MIN(a, b) ((a)<(b)? (a) : (b))
 
 // Might be useful if I ever try using raygui
-// extern size_t _dump_memory_arr(const uint8_t* mem, size_t memcap, char** out);
-// extern size_t _dump_stack(const uint16_t* stack, size_t stacksize, char** out);
-// extern size_t _dump_regs(const uint8_t* V, size_t registerAmount, char** out);
-// extern size_t _dump_keys(const uint8_t* V, size_t registerAmount, char** out);
+extern size_t _dump_memory_arr(const uint8_t* mem, size_t memcap, char** out);
+extern size_t _dump_stack(const uint16_t* stack, size_t stacksize, char** out);
+extern size_t _dump_regs(const uint8_t* V, size_t registerAmount, char** out);
+extern size_t _dump_keys(const uint8_t* V, size_t registerAmount, char** out);
+extern size_t _dump_internal_regs(const Chip8* c8, char** out);
 
 static inline void _draw_screen(GameWindow* win, RenderTexture2D rTexture);
 static inline void _window_init(GameWindow* win);
@@ -75,13 +76,13 @@ void guiRun(GameWindow* window) {
             chip8PressKeys(window->vm, keys);
             keyboardAcc = 0;
         }
-        float insNum = ceilf(delta * C8_CLOCK_SPEED);
-        for (int i = 0; i < (int) insNum; i++) {
+        int insNum = (int) ceilf(delta * C8_CLOCK_SPEED);
+        for (int i = 0; i < insNum; i++) {
             chip8EmulateCycle(window->vm);
         }
 
-        float decrNum = ceilf(delta * C8_TIMER_SPEED);
-        for (int i = 0; i < (int) decrNum; i++) {
+        int decrNum = (int) ceilf(delta * C8_TIMER_SPEED);
+        for (int i = 0; i < decrNum; i++) {
             chip8DecrTimers(window->vm);
         }
         _draw_screen(window, actualGame);

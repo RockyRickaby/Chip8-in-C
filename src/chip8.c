@@ -42,46 +42,46 @@ static const uint8_t _chip8FontSet[80] = {
 static void _op_unknown(Chip8* c8);
 static void _op_nop(Chip8* c8);
 
-static void _op0_cls(Chip8* c8);
-static void _op0_ret(Chip8* c8);
-static void _op0_sys(Chip8* c8);
+static void _op0_cls(Chip8* c8);        /* 00E0 */
+static void _op0_ret(Chip8* c8);        /* 00EE */
+static void _op0_sys(Chip8* c8);        /* 0nnn */
 
-static void _op1_jump_addr(Chip8* c8);
-static void _op2_call(Chip8* c8);
-static void _op3_skip_eq_byte(Chip8* c8);
-static void _op4_skip_neq_byte(Chip8* c8);
-static void _op5_skip_eq_reg(Chip8* c8);
-static void _op6_load_byte(Chip8* c8);
-static void _op7_add_byte(Chip8* c8);
+static void _op1_jump_addr(Chip8* c8);          /* 1nnn */
+static void _op2_call(Chip8* c8);               /* 2nnn */
+static void _op3_skip_eq_byte(Chip8* c8);       /* 3xkk */
+static void _op4_skip_neq_byte(Chip8* c8);      /* 4xkk */
+static void _op5_skip_eq_reg(Chip8* c8);        /* 5xy0 */
+static void _op6_load_byte(Chip8* c8);          /* 6xkk */
+static void _op7_add_byte(Chip8* c8);           /* 7xkk  */
 
-static void _op8_load_reg(Chip8* c8);
-static void _op8_or(Chip8* c8);
-static void _op8_and(Chip8* c8);
-static void _op8_xor(Chip8* c8);
-static void _op8_add_reg(Chip8* c8);
-static void _op8_sub_reg(Chip8* c8);
-static void _op8_shiftr_reg(Chip8* c8);
-static void _op8_sub_reversed_reg(Chip8* c8);
-static void _op8_shiftl_reg(Chip8* c8);
+static void _op8_load_reg(Chip8* c8);           /* 8xy0 */
+static void _op8_or(Chip8* c8);                 /* 8xy1 */
+static void _op8_and(Chip8* c8);                /* 8xy2 */
+static void _op8_xor(Chip8* c8);                /* 8xy3 */
+static void _op8_add_reg(Chip8* c8);            /* 8xy4 */
+static void _op8_sub_reg(Chip8* c8);            /* 8xy5 */
+static void _op8_shiftr_reg(Chip8* c8);         /* 8xy6 */
+static void _op8_sub_reversed_reg(Chip8* c8);   /* 8xy7 */
+static void _op8_shiftl_reg(Chip8* c8);         /* 8xyE*/
 
-static void _op9_skip_neq_reg(Chip8* c8);
-static void _opA_load_I(Chip8* c8);
-static void _opB_jump_reg(Chip8* c8);
-static void _opC_rand(Chip8* c8);
-static void _opD_draw_sprite(Chip8* c8);
+static void _op9_skip_neq_reg(Chip8* c8);       /* 9xy0 */
+static void _opA_load_I(Chip8* c8);             /* Annn */
+static void _opB_jump_reg(Chip8* c8);           /* Bnnn */
+static void _opC_rand(Chip8* c8);               /* Cxkk */
+static void _opD_draw_sprite(Chip8* c8);        /* Dxyn */
 
-static void _opE_skip_on_keypress(Chip8* c8);
-static void _opE_skip_on_keyrelease(Chip8* c8);
+static void _opE_skip_on_keypress(Chip8* c8);       /* Ex9E */
+static void _opE_skip_on_keyrelease(Chip8* c8);     /* ExA1 */
 
-static void _opF_load_delay_timer_toreg(Chip8* c8);
-static void _opF_load_keypress_and_wait(Chip8* c8);
-static void _opF_load_delay_timer_set(Chip8* c8);
-static void _opF_load_sound_timer_set(Chip8* c8);
-static void _opF_add_I_reg(Chip8* c8);
-static void _opF_load_hex_sprite_for_value(Chip8* c8);
-static void _opF_store_bcd_rep_of_reg(Chip8* c8);
-static void _opF_store_regs_to_mem_starting_at_I(Chip8* c8);
-static void _opF_load_regs_from_mem_starting_at_I(Chip8* c8);
+static void _opF_load_delay_timer_toreg(Chip8* c8);             /* Fx07 */
+static void _opF_load_keypress_and_wait(Chip8* c8);             /* Fx0A */
+static void _opF_load_delay_timer_set(Chip8* c8);               /* Fx15 */
+static void _opF_load_sound_timer_set(Chip8* c8);               /* Fx18 */
+static void _opF_add_I_reg(Chip8* c8);                          /* Fx1E */
+static void _opF_load_hex_sprite_for_value(Chip8* c8);          /* Fx29 */
+static void _opF_store_bcd_rep_of_reg(Chip8* c8);               /* Fx33 */
+static void _opF_store_regs_to_mem_starting_at_I(Chip8* c8);    /* Fx55 */
+static void _opF_load_regs_from_mem_starting_at_I(Chip8* c8);   /* Fx65 */
 
 static void _0prefix_ins(Chip8* c8);            /* 00E0 and 00EE - if statement */
 static void _8prefix_ins(Chip8* c8);        
