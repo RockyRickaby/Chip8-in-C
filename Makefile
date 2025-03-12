@@ -30,7 +30,7 @@ ifeq ($(OS),Windows_NT)
 MAIN	:= Chip8Win.exe
 LFLAGS := $(LFLAGS) -LC\raylib\raylib\src
 INCLUDE := $(INCLUDDE) C\raylib\raylib\src
-USEDLIBS := -lm -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows 
+USEDLIBS := -lm -lraylib -lopengl32 -lgdi32 -lwinmm # -mwindows 
 SOURCEDIRS	:= $(SRC)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
