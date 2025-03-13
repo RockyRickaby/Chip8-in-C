@@ -12,7 +12,7 @@ This implementation was made using a nice little library called [Raylib](https:/
 Run the following batch script to download the dependencies:
 
 ```console
-$ ./getdeps.bat
+> ./getdeps.bat
 ```
 
 **Obs.:** If you have already installed Raylib 5.5
@@ -21,13 +21,13 @@ before through the installer available on the Raylib website, you can skip this 
 After that, you should be able to compile the project with just:
 
 ```console
-$ make
+> make
 ```
 
 Or:
 
 ```console
-$ mingw32-make
+> mingw32-make
 ```
 
 Whichever you've got to use (although this assumes that `mingw32-make` will be fine with a project without a `WinMain` entry point). The executable will be saved in a folder called `output`.<br>
@@ -35,25 +35,15 @@ Whichever you've got to use (although this assumes that `mingw32-make` will be f
 To run this emulator, you may use the command line, like this
 
 ```console
-$ ./output/Chip8Win.exe <gamepath>
+> ./output/Chip8Win.exe <gamepath>
 ```
 
 Or just drag and drop a CHIP-8 rom on the executable.
 
 ### On Linux
 
-Run the following bash script to download the dependencies:
-
-```console
-$ ./getdeps.sh
-```
-
-If it doesn't run, try this first:
-
-```console
-$ chmod +x ./getdeps.sh
-```
-
+You might want to follow the instructions listed [here](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux). If you don't see your distribution listed in the
+[Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux), you're gonna have to manually compile and install the `SHARED` version of Raylib.
 After that, you should be able to compile the project with just:
 
 ```console
