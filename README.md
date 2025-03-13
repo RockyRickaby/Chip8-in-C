@@ -28,7 +28,16 @@ Or:
 $ mingw32-make
 ```
 
-Whichever you've got to use (although this assumes that `mingw32-make` will be fine with a project without a `WinMain` entry point). The executable will be saved in a folder called `output`.
+Whichever you've got to use (although this assumes that `mingw32-make` will be fine with a project without a `WinMain` entry point). The executable will be saved in a folder called `output`.<br>
+
+To run this game, you may use the command line, like this
+
+```console
+$ ./output/Chip8Win.exe <gamepath>
+```
+
+Or just drag and drop a CHIP-8 rom on the executable.
+
 
 ### On Linux
 
