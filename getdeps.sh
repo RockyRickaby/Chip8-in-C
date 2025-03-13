@@ -19,15 +19,10 @@ getdependencies()
 		mkdir $libdir
 	fi
 	wget -vc -P $tmp https://github.com/raysan5/raylib/releases/download/5.5/${raylibzip}
-	curl -o ${tmp}/rprand.h https://raw.githubusercontent.com/raysan5/raylib/refs/heads/master/src/external/rprand.h
-	
 	tar -xzvf ${tmp}/${raylibzip} -C ${tmp}
 
-	mv ${tmp}/${raylib}/lib/* $libdir
+	mv ${tmp}/${raylib}/lib/libraylib.a $libdir
 	mv ${tmp}/${raylib}/include/* $includedir
-
-	mkdir ${includedir}/external
-	mv ${tmp}/rprand.h ${includedir}/external
 
 	rm -rf $tmp
 	
@@ -37,14 +32,6 @@ getdependencies()
 # check if files already exist. If not, just download everything at once.
 
 if [ ! -e ${libdir}/libraylib.a ]; then
-	getdependencies 
-elif [ ! -e ${libdir}/libraylib.so.5.5.0 ]; then
-	getdependencies 
-elif [ ! -e ${libdir}/libraylib.so.550 ]; then
-	getdependencies
-elif [ ! -e ${libdir}/libraylib.so ]; then
-	getdependencies 
-elif [ ! -e ${includedir}/external/rprand.h ]; then
 	getdependencies 
 elif [ ! -e ${includedir}/raylib.h ]; then
 	getdependencies 
