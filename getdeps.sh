@@ -36,20 +36,22 @@ getdependencies()
 
 # check if files already exist. If not, just download everything at once.
 
-if [ ! -e ${includedir}/libraylib.a ]; then
+if [ ! -e ${libdir}/libraylib.a ]; then
 	getdependencies 
-elif [ ! -e ${includedir}/libraylib.so.5.5.0 ]; then
+elif [ ! -e ${libdir}/libraylib.so.5.5.0 ]; then
 	getdependencies 
-elif [ ! -e ${includedir}/libraylib.so.550 ]; then
+elif [ ! -e ${libdir}/libraylib.so.550 ]; then
 	getdependencies 
-elif [ ! -e ${libdir}/rprand.h ]; then
+elif [ ! -e ${includedir}/external/rprand.h ]; then
 	getdependencies 
-elif [ ! -e ${libdir}/raylib.h ]; then
+elif [ ! -e ${includedir}/raylib.h ]; then
 	getdependencies 
-elif [ ! -e ${libdir}/raymath.h ]; then
+elif [ ! -e ${includedir}/raymath.h ]; then
 	getdependencies 
-elif [ ! -e ${libdir}/rlgl.h ]; then
+elif [ ! -e ${includedir}/rlgl.h ]; then
 	getdependencies 
+else
+	echo "All good to go!"
 fi
 
 echo "Done!"
