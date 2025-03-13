@@ -5,6 +5,8 @@ one. Since that is pretty much not possible right now, I decided to implement so
 
 This implementation was made using a nice little library called [Raylib](https://www.raylib.com/).
 
+Until the project is made somewhat compiler agnostic, you're gonna need GCC to compile it. A version of Mingw GCC comes with the Raylib installer for Windows.
+
 ## Building and running
 
 ### On Windows
@@ -40,8 +42,14 @@ Or just drag and drop a CHIP-8 rom on the executable.
 ### On Linux
 
 You might want to follow the instructions listed [here](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux). If you don't see your distribution listed in the
-[Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux), you're gonna have to manually compile and install Raylib (either
-`STATIC` or `SHARED` versions should work just fine). After that, you should be able to compile the project with just:
+[Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux) section, you're either gonna have to manually compile and install Raylib (either
+`STATIC` or `SHARED` versions should work just fine) or, alternatively, you might be able to just run the following shell script:
+
+```console
+$ ./getdeps.sh
+```
+
+After that, you should be able to compile the project with just:
 
 ```console
 $ make
