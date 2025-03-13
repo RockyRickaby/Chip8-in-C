@@ -9,14 +9,11 @@ This implementation was made using a nice little library called [Raylib](https:/
 
 ### On Windows
 
-Run the following batch script to download the dependencies:
+Download and install Raylib from the [website](https://www.raylib.com) or run the following batch script to download the dependencies:
 
 ```console
 > ./getdeps.bat
 ```
-
-**Obs.:** If you have already installed Raylib 5.5
-before through the installer available on the Raylib website, you can skip this first step, as the Makefile tries searching for the necessary files in the default Raylib installation directory.
 
 After that, you should be able to compile the project with just:
 
