@@ -42,3 +42,7 @@ Or just drag and drop a CHIP-8 rom on the executable.
 ### On Linux
 
 Linux users are gonna have to wait until the script(s) get made to be able to just compile and run this project.
+
+## Some ROMS
+
+You can find a lot of roms for the CHIP-8 in [this](https://github.com/AlexEne/rust-chip8) repository, which consists of yet another CHIP-8 implementation made by someone else, but in Rust!
