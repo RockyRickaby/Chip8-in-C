@@ -40,8 +40,8 @@ Or just drag and drop a CHIP-8 rom on the executable.
 ### On Linux
 
 You might want to follow the instructions listed [here](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux). If you don't see your distribution listed in the
-[Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux), you're gonna have to manually compile and install the `SHARED` version of Raylib.
-After that, you should be able to compile the project with just:
+[Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux), you're gonna have to manually compile and install Raylib (either
+`STATIC` or `SHARED` versions should work just fine). After that, you should be able to compile the project with just:
 
 ```console
 $ make
