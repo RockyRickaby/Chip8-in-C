@@ -41,6 +41,8 @@ if [ ! -e ${libdir}/libraylib.a ]; then
 elif [ ! -e ${libdir}/libraylib.so.5.5.0 ]; then
 	getdependencies 
 elif [ ! -e ${libdir}/libraylib.so.550 ]; then
+	getdependencies
+elif [ ! -e ${libdir}/libraylib.so ]; then
 	getdependencies 
 elif [ ! -e ${includedir}/external/rprand.h ]; then
 	getdependencies 
