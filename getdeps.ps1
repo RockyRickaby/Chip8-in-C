@@ -21,8 +21,8 @@ function Get-Dependencies {
     Invoke-WebRequest "https://github.com/raysan5/raylib/releases/download/5.5/$RaylibZip" -OutFile "$TmpFolder\$RaylibZip"
     Expand-Archive "$TmpFolder\$RaylibZip" -DestinationPath "$TmpFolder" -Force
 
-    Move-Item "$TmpFolder\$Raylib\include\*" "$IncludeDir"
-    Move-Item "$TmpFolder\$Raylib\lib\*" "$LibDir"
+    Move-Item "$TmpFolder\$Raylib\include\*" "$IncludeDir" -Force
+    Move-Item "$TmpFolder\$Raylib\lib\*" "$LibDir" -Force
 
     Remove-Item "$TmpFolder" -Recurse
 
