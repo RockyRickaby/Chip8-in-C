@@ -11,10 +11,18 @@ Until the project is made somewhat compiler agnostic, you're gonna need GCC to c
 
 ### On Windows
 
-Download and install Raylib from the [website](https://www.raylib.com) or run the following batch script to download the dependencies:
+Download and install Raylib from the [website](https://www.raylib.com) or run the following batch script (preferably using the Command Prompt) to download the dependencies:
 
 ```console
-> ./getdeps.bat
+> .\getdeps.bat
+```
+
+In case that doesn't work, try running the PowerShell script (inside PowerShell):
+
+```console
+> .\getdeps.ps1                                                     # This might work just fine
+or
+> powershell -ExecutionPolicy Bypass -File .\getdeps.ps1            # Use this in case PowerShell says "execution of scripts is disabled on this system" to the previous command
 ```
 
 After that, you should be able to compile the project with just:
