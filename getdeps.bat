@@ -9,7 +9,6 @@ set libdir=lib
 if not exist %libdir%\libraylib.a goto exec
 if not exist %libdir%\libraylibdll.a goto exec
 if not exist %libdir%\raylib.dll goto exec
-if not exist %includedir%\external\rprand.h goto exec
 if not exist %includedir%\raylib.h goto exec
 if not exist %includedir%\raymath.h goto exec
 if not exist %includedir%\rlgl.h goto exec
