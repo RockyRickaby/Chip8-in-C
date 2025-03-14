@@ -42,7 +42,7 @@ Whichever you've got to use (although this assumes that `mingw32-make` will be f
 To run this emulator, you may use the command line, like this
 
 ```console
-> ./output/Chip8Win.exe <gamepath>
+> .\output\Chip8Win.exe <gamepath>
 ```
 
 Or just drag and drop a CHIP-8 rom on the executable.
