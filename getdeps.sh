@@ -31,13 +31,10 @@ getdependencies()
 
 # check if files already exist. If not, just download everything at once.
 
-if [ ! -e ${libdir}/libraylib.a ]; then
-	getdependencies 
-elif [ ! -e ${includedir}/raylib.h ]; then
-	getdependencies 
-elif [ ! -e ${includedir}/raymath.h ]; then
-	getdependencies 
-elif [ ! -e ${includedir}/rlgl.h ]; then
+if [ ! -e ${libdir}/libraylib.a ] || \
+[ ! -e ${includedir}/raylib.h ] || \
+[ ! -e ${includedir}/raymath.h ] || \
+[ ! -e ${includedir}/rlgl.h ]; then
 	getdependencies 
 else
 	echo "All good to go!"
