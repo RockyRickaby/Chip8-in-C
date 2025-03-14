@@ -25,7 +25,7 @@ function Get-Dependencies {
     Move-Item "$TmpFolder\$Raylib\lib\*" "$LibDir"
 
     Remove-Item "$TmpFolder" -Recurse
-    
+
     Write-Host "Done downloading dependencies"
 }
 
@@ -37,7 +37,6 @@ If (
     (-Not (Test-Path "$IncludeDir\rlgl.h")) -or
     (-Not (Test-Path "$IncludeDir\raymath.h"))
 ) {
-    Write-Host "Couldn't find a file"
     Get-Dependencies
 } Else {
     Write-Host "All good to go!"
