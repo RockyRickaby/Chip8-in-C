@@ -54,7 +54,8 @@ You might want to follow the instructions listed [here](https://github.com/raysa
 `STATIC` or `SHARED` versions should work just fine) or, alternatively, you might be able to just run the following shell script:
 
 ```console
-$ ./getdeps.sh
+$ chmod +x ./getdeps.sh              # give it permission to execute
+$ ./getdeps.sh                       # execute the script
 ```
 
 After that, you should be able to compile the project with just:
