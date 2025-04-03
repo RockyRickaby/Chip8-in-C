@@ -1,5 +1,9 @@
 # CHIP-8 implementation (in C)
 
+
+https://github.com/user-attachments/assets/68629a4d-7cac-4e28-a2d2-383fc06d4333
+
+
 I want to one day be able to create a NES emulator, even if not a good
 one. Since that is pretty much not possible right now, I decided to implement something simpler. I followed [these](https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/) [two](https://tobiasvl.github.io/blog/write-a-chip-8-emulator/) tutorials while building this implementation of the CHIP-8 plus [this](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM) nice technical reference.
 
