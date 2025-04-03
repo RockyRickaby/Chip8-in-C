@@ -53,6 +53,9 @@ Or just drag and drop a CHIP-8 rom on the executable.
 
 ### On Linux
 
+> [!NOTE]
+> The timing of... _everything_, might be quite off on Linux compared to Windows (as in, things happen _too fast_). You might want to mess around with the C8_CLOCK_SPEED macro in `chip8.h` to fix that (increasing the value might help).
+
 You might want to follow the instructions listed [here](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux). If you don't see your distribution listed in the
 [Install on GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-on-gnu-linux) section, you're either gonna have to manually compile and install Raylib (either
 `STATIC` or `SHARED` versions should work just fine) or, alternatively, you might be able to just run the following shell script:
