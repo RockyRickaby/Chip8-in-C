@@ -80,3 +80,4 @@ $ ./output/Chip8Linux <gamepath>
 ## Some ROMS
 
 You can find a lot of roms for the CHIP-8 in [this](https://github.com/AlexEne/rust-chip8) repository, which consists of yet another CHIP-8 implementation made by someone else, but in Rust!
+Also, the controls in this implementation are the exact same as that other implementation.
